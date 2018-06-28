@@ -1,0 +1,31 @@
+-------------------------------------------------------------------------------
+Test set: com.bank.BananaBank.BalanceControllerTest
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 2.011 s <<< FAILURE! - in com.bank.BananaBank.BalanceControllerTest
+testUserDoesNotHaveToken(com.bank.BananaBank.BalanceControllerTest)  Time elapsed: 0.005 s  <<< ERROR!
+java.lang.IllegalStateException: Failed to load ApplicationContext
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: 
+Error creating bean with name 'balanceController': Unsatisfied dependency expressed through field 'userRepository'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userRepository': Cannot create inner bean '(inner bean)#40017e98' of type [org.springframework.orm.jpa.SharedEntityManagerCreator] while setting bean property 'entityManager'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name '(inner bean)#40017e98': Cannot resolve reference to bean 'entityManagerFactory' while setting constructor argument; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory': Post-processing of FactoryBean's singleton object failed; nested exception is org.springframework.jdbc.datasource.init.ScriptStatementFailedException: Failed to execute SQL script statement #1 of URL [file:/D:/Find/BananaBank/target/classes/data.sql]: INSERT INTO USER (user_id, value) VALUES(1,500); nested exception is org.h2.jdbc.JdbcSQLException: Naruszenie ograniczenia Klucza G³ównego lub Indeksu Unikalnego: "PRIMARY KEY ON PUBLIC.USER(USER_ID)"
+Unique index or primary key violation: "PRIMARY KEY ON PUBLIC.USER(USER_ID)"; SQL statement:
+INSERT INTO USER (user_id, value) VALUES(1,500) [23505-197]
+Caused by: org.springframework.beans.factory.BeanCreationException: 
+Error creating bean with name 'userRepository': Cannot create inner bean '(inner bean)#40017e98' of type [org.springframework.orm.jpa.SharedEntityManagerCreator] while setting bean property 'entityManager'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name '(inner bean)#40017e98': Cannot resolve reference to bean 'entityManagerFactory' while setting constructor argument; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory': Post-processing of FactoryBean's singleton object failed; nested exception is org.springframework.jdbc.datasource.init.ScriptStatementFailedException: Failed to execute SQL script statement #1 of URL [file:/D:/Find/BananaBank/target/classes/data.sql]: INSERT INTO USER (user_id, value) VALUES(1,500); nested exception is org.h2.jdbc.JdbcSQLException: Naruszenie ograniczenia Klucza G³ównego lub Indeksu Unikalnego: "PRIMARY KEY ON PUBLIC.USER(USER_ID)"
+Unique index or primary key violation: "PRIMARY KEY ON PUBLIC.USER(USER_ID)"; SQL statement:
+INSERT INTO USER (user_id, value) VALUES(1,500) [23505-197]
+Caused by: org.springframework.beans.factory.BeanCreationException: 
+Error creating bean with name '(inner bean)#40017e98': Cannot resolve reference to bean 'entityManagerFactory' while setting constructor argument; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory': Post-processing of FactoryBean's singleton object failed; nested exception is org.springframework.jdbc.datasource.init.ScriptStatementFailedException: Failed to execute SQL script statement #1 of URL [file:/D:/Find/BananaBank/target/classes/data.sql]: INSERT INTO USER (user_id, value) VALUES(1,500); nested exception is org.h2.jdbc.JdbcSQLException: Naruszenie ograniczenia Klucza G³ównego lub Indeksu Unikalnego: "PRIMARY KEY ON PUBLIC.USER(USER_ID)"
+Unique index or primary key violation: "PRIMARY KEY ON PUBLIC.USER(USER_ID)"; SQL statement:
+INSERT INTO USER (user_id, value) VALUES(1,500) [23505-197]
+Caused by: org.springframework.beans.factory.BeanCreationException: 
+Error creating bean with name 'entityManagerFactory': Post-processing of FactoryBean's singleton object failed; nested exception is org.springframework.jdbc.datasource.init.ScriptStatementFailedException: Failed to execute SQL script statement #1 of URL [file:/D:/Find/BananaBank/target/classes/data.sql]: INSERT INTO USER (user_id, value) VALUES(1,500); nested exception is org.h2.jdbc.JdbcSQLException: Naruszenie ograniczenia Klucza G³ównego lub Indeksu Unikalnego: "PRIMARY KEY ON PUBLIC.USER(USER_ID)"
+Unique index or primary key violation: "PRIMARY KEY ON PUBLIC.USER(USER_ID)"; SQL statement:
+INSERT INTO USER (user_id, value) VALUES(1,500) [23505-197]
+Caused by: org.springframework.jdbc.datasource.init.ScriptStatementFailedException: 
+Failed to execute SQL script statement #1 of URL [file:/D:/Find/BananaBank/target/classes/data.sql]: INSERT INTO USER (user_id, value) VALUES(1,500); nested exception is org.h2.jdbc.JdbcSQLException: Naruszenie ograniczenia Klucza G³ównego lub Indeksu Unikalnego: "PRIMARY KEY ON PUBLIC.USER(USER_ID)"
+Unique index or primary key violation: "PRIMARY KEY ON PUBLIC.USER(USER_ID)"; SQL statement:
+INSERT INTO USER (user_id, value) VALUES(1,500) [23505-197]
+Caused by: org.h2.jdbc.JdbcSQLException: 
+Naruszenie ograniczenia Klucza G³ównego lub Indeksu Unikalnego: "PRIMARY KEY ON PUBLIC.USER(USER_ID)"
+Unique index or primary key violation: "PRIMARY KEY ON PUBLIC.USER(USER_ID)"; SQL statement:
+INSERT INTO USER (user_id, value) VALUES(1,500) [23505-197]
+

@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: com.bank.BananaBank.BalanceServiceTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.361 s <<< FAILURE! - in com.bank.BananaBank.BalanceServiceTest
+testShouldDecreaseValue(com.bank.BananaBank.BalanceServiceTest)  Time elapsed: 0.361 s  <<< FAILURE!
+java.lang.AssertionError
+	at com.bank.BananaBank.BalanceServiceTest.testShouldDecreaseValue(BalanceServiceTest.java:53)
+
